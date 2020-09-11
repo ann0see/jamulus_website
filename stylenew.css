@@ -1,0 +1,43 @@
+#header {}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 695px;
+}
+
+#shortdesc {
+  margin: 2em 0 2em 0;
+}
+
+#small_jamulus_logo {
+  margin: 0 1em 0 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+#get_started {
+  background-color: #4dabcc;
+  color: #ffffff;
+  padding: 1em;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+#get_started:hover {
+  background-color: #72bcd4;
+}
+
+#dld_frm_sf {
+  color: #72bcd4;
+}
