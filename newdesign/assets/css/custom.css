@@ -84,7 +84,11 @@ a:hover {
   padding: 1em;
 }
 
+#footer a {
+  display: block;
+}
 #footer a>img {
+  display: block;
   transition: 0.4s;
   opacity: 1;
 }
