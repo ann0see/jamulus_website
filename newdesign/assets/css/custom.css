@@ -87,6 +87,7 @@ a:hover {
 #footer a {
   display: block;
 }
+
 #footer a>img {
   display: block;
   transition: 0.4s;
@@ -110,4 +111,12 @@ a:hover {
 #footer img {
   height: 2em;
   color: #ffffff;
+}
+
+#copyright {
+  margin-top:15px!important;
+}
+
+#copyright a {
+  display: inline;
 }
