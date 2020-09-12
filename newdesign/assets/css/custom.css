@@ -22,10 +22,13 @@ h1 {
   border-radius: 5px;
   text-align: center;
   margin-bottom: 0.2em;
+  transition: 0.4s;
+  opacity: 1;
 }
 
 #get_started:hover {
-  background-color: #65b4d4;
+  transition: 0.4s;
+  opacity: 0.7;
 }
 
 #dl_frm_sf_container {
@@ -43,9 +46,16 @@ h1 {
 
 #jamulusbanner {
   width: 100%;
+  transition: 0.4s;
+  opacity: 1;
 }
 
-.fx-row {
+#jamulusbanner:hover {
+  transition: 0.4s;
+  opacity: 0.9;
+}
+
+main>div {
   padding: 0 2em 0 2em;
 }
 
@@ -69,13 +79,26 @@ a:hover {
   margin-top: 2em;
   padding: 1em;
 }
+
+#footer a>img {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+#footer a>img:hover {
+  transition: 0.4s;
+  opacity: 0.8;
+}
+
 #footer [class*="fx-col"] {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
 }
+
 #footer a {
   color: #ffffff;
 }
+
 #footer img {
   height: 2em;
   color: #ffffff;
