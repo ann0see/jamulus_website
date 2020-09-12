@@ -10,20 +10,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body itemscope itemtype="http://schema.org/SoftwareApplication">
   <div class="fx-row fx-row-center-xs" id="header">
-    <div class="fx-col-100-xs">
-      <img alt="Jamulus Icon" src="assets/img/jamulus-icon-2020.svg" width="200px" loading="lazy" />
-      <h1>Jamulus</h1>
-      <span>Make music. Online.</span>
+    <div class="fx-col-100-xs" >
+      <img itemprop="logo" alt="Jamulus Icon" src="assets/img/jamulus-icon-2020.svg" width="200px" loading="lazy" />
+      <h1 itemprop="name">Jamulus</h1>
+      <span itemprop="slogan">Make <span itemprop="applicationCategory">music</span>. Online.</span>
     </div>
     <div class="fx-col-100-xs" id="actionbutton">
       <div class="fx-row">
         <div class="fx-col-100-xs">
-          <a href="https://github.com/corrados/jamulus/wiki/Getting-Started" target="_blank" id="get_started">Get started now!</a>
+          <a href="https://github.com/corrados/jamulus/wiki/Getting-Started" target="_blank" id="get_started" itemprop="url">Get started now!</a>
         </div>
         <div class="fx-col-100-xs" id="dl_frm_sf_container">
-          <a href="https://sourceforge.net/projects/llcon/files/latest/download" target="_blank" id="dld_frm_sf">Directly download Jamulus</a>
+          <a href="https://sourceforge.net/projects/llcon/files/latest/download" itemprop="downloadUrl" target="_blank" id="dld_frm_sf">Directly download Jamulus</a>
         </div>
       </div>
     </div>
@@ -31,19 +31,21 @@
   <main>
     <div class="fx-row fx-row-center-xs" id="firstrow">
       <div class="fx-col-100-xs fx-col-50-l">
-        <h2>What is Jamulus?</h2>
-        <span>The Jamulus software enables musicians to perform real-time jam sessions over the internet. </span>
-        <h2>How does Jamulus work?</h2>
-        <span>There is one server running the Jamulus server software which collects the audio data from each Jamulus client, mixes the audio data and sends the mix back to each client.</span>
-        <h2>Jamulus is Open Source</h2>
-        <p>Jamulus is Open Source software (<a href="http://www.gnu.org/licenses/gpl-2.0.html" target="_blank">GPL,
-            GNU General Public License</a>) and runs under Windows
-          (<a href="http://www.steinberg.net" target="_blank">ASIO</a>),
-          MacOS (<a href="http://developer.apple.com/technologies/mac/audio-and-video.html" target="_blank">Core
-            Audio</a>) and Linux (<a href="http://jackaudio.org" target="_blank">Jack</a>).
-          It is based on the <a href="https://www.qt.io/" target="_blank">Qt framework</a>
-          and uses the <a href="http://www.opus-codec.org" target="_blank">OPUS</a> audio
-          codec.</p>
+        <div itemprop="abstract">
+          <h2>What is Jamulus?</h2>
+          <span>The Jamulus software enables musicians to perform real-time jam sessions over the internet. </span>
+          <h2>How does Jamulus work?</h2>
+          <span>There is one server running the Jamulus server software which collects the audio data from each Jamulus client, mixes the audio data and sends the mix back to each client.</span>
+          <h2>Jamulus is Open Source</h2>
+          <p>Jamulus is Open Source software (<a href="http://www.gnu.org/licenses/gpl-2.0.html" target="_blank"><span itemprop="license">GPL,
+              GNU General Public License</span></a>) and runs under <span itemprop="operatingSystem">Windows</span>
+            (<a href="http://www.steinberg.net" target="_blank">ASIO</a>),
+            <span itemprop="operatingSystem">MacOS</span> (<a href="http://developer.apple.com/technologies/mac/audio-and-video.html" target="_blank">Core
+              Audio</a>) and <span itemprop="operatingSystem">Linux</span> (<a href="http://jackaudio.org" target="_blank">Jack</a>).
+            It is based on the <a href="https://www.qt.io/" target="_blank">Qt framework</a>
+            and uses the <a href="http://www.opus-codec.org" target="_blank">OPUS</a> audio
+            codec.</p>
+        </div>
         <h3>Contribute</h3>
         <p>
           Ideas? Found a bug? Want to contribute? Since Jamulus is open source you can help us! Find the project on <a href="https://sourceforge.net/projects/llcon/" target="_blank">SourceForge</a> and the <a
@@ -63,7 +65,7 @@
         <p>
           Have a look at the <a href="https://github.com/corrados/jamulus/wiki" target="_blank">Jamulus Wiki on GitHub</a>. Especially have a look at the <a href="https://github.com/corrados/jamulus/wiki/Client-Troubleshooting"
             target="_blank">troubleshooting section</a>!
-          You can also ask in the <a href="https://sourceforge.net/p/llcon/discussion/" target="_blank">forums on SourceForge</a>.
+          You can also ask in the <a href="https://sourceforge.net/p/llcon/discussion/" itemprop="discussionUrl" target="_blank">forums on SourceForge</a>.
         </p>
       </div>
     </div>
