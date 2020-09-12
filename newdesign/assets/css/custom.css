@@ -29,7 +29,7 @@ h1 {
 }
 
 #dl_frm_sf_container {
-  margin: .3em 0 0 0;
+  margin: .5em 0 0 0;
 }
 
 #dld_frm_sf {
@@ -39,6 +39,14 @@ h1 {
 
 #dld_frm_sf:hover {
   text-decoration: underline;
+}
+
+#jamulusbanner {
+  width: 100%;
+}
+
+.fx-row {
+  padding: 0 2em 0 2em;
 }
 
 h2, h3, h4, h5, h6 {
