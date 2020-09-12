@@ -10,6 +10,10 @@ h1 {
   padding: 1em 0 1em 0;
 }
 
+#jamulusicon {
+  width: 200px;
+}
+
 #get_started {
   display: inline-block;
   width: auto;
