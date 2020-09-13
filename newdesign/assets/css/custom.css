@@ -14,7 +14,7 @@ h1 {
   width: 200px;
 }
 
-#get_started {
+.get_started_btn {
   display: inline-block;
   width: auto;
   background-color: #49a9c9;
@@ -30,7 +30,7 @@ h1 {
   opacity: 1;
 }
 
-#get_started:hover {
+.get_started_btn:hover {
   transition: 0.4s;
   opacity: 0.7;
 }
