@@ -59,7 +59,7 @@ h1 {
   opacity: 0.9;
 }
 
-main>div {
+main {
   padding: 0 2em 0 2em;
 }
 
@@ -119,4 +119,9 @@ a:hover {
 
 #copyright a {
   display: inline;
+}
+
+.fx-row {
+  margin-left: 0;
+  margin-right: 0;
 }
