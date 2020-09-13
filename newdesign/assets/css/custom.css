@@ -47,6 +47,9 @@ header {
 #dld_frm_sf:hover {
   text-decoration: underline;
 }
+#bannercontainer {
+  margin-top: 10px;
+}
 
 #jamulusbanner {
   width: 100%;
