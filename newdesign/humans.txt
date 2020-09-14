@@ -2,6 +2,9 @@
 Texts and Software: corrados
 Site: https://github.com/corrados/
 
+Texts and translation: gilgongo
+Site: https://github.com/gilgongo
+
 HTML and CSS Coding: ann0see
 Site: https://github.com/ann0see
 
