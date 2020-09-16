@@ -47,19 +47,9 @@ header {
 #dld_frm_sf:hover {
   text-decoration: underline;
 }
-#bannercontainer {
+
+#logocontainer {
   margin-top: 10px;
-}
-
-#jamulusbanner {
-  width: 100%;
-  transition: 0.4s;
-  opacity: 1;
-}
-
-#jamulusbanner:hover {
-  transition: 0.4s;
-  opacity: 0.9;
 }
 
 main {
