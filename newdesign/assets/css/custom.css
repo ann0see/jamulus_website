@@ -56,7 +56,7 @@ main {
   padding: 0 2em 0 2em;
 }
 
-h1, h2, h3 {
+h1, h2, h3 #logocontainer {
   color: #1181a4;
 }
 
