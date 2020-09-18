@@ -28,6 +28,7 @@ header {
 }
 
 #get_started_btn_top:hover {
+  text-decoration: none;
   transition: 0.4s;
   border-color: #ffffff;
   opacity: 0.8;
