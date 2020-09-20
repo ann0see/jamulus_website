@@ -3,7 +3,7 @@ h1 {
 }
 
 header {
-  background-color: #8fc8dd;
+  background-color: #49a9c9;
   color: #ffffff;
   margin-bottom: 2em;
   text-align: center;
@@ -141,14 +141,6 @@ a:hover {
 
 h1 {
   margin: 0;
-}
-
-header {
-  background-color: #8fc8dd;
-  color: #ffffff;
-  margin-bottom: 2em;
-  text-align: center;
-  padding: 1em 0 1em 0;
 }
 
 #jamulusicon {
