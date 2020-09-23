@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Jamulus Server</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<style>
+	#migrmessage {
+		background-color: #ff0000;
+		color: #ffffff;
+		font-weight: bold;
+		padding: 10px;
+		font-size: 2em;
+	}
+	#migrmessage a {
+		color: #fff;
+		text-decoration: underline;
+	}
+
+	.red {
+		color: #ff0000;
+	}
+	</style>
+</head>
+
+<body>
+	<div id="main_container">
+		<div id="header"></div>
+		<div id="navigation"><a href="index.html">Home</a></div>
+		<div id="content">
+			<div id="migrmessage">
+				<div><strong>⚠ This page might be outdated.</strong></div>We are currently migrating to an other wiki software. More up to date information during transmission period can be seen on the <a href="https://github.com/corrados/jamulus/wiki">GitHub wiki</a>.
+				Please head over!
+				<ul>
+					<li>Wiki entry: <a href="https://github.com/corrados/jamulus/wiki/Getting-Started">Getting started with Jamulus</a></li>
+					<li>Wiki entry: <a href="https://github.com/corrados/jamulus/wiki/Running-a-Server">Setting up a server</a></li>
+				</ul>
+			</div>
+
+			<!-- Jamulus server requirements -->
+			<h2>Jamulus server requirements</h2>
+			<h4>Internet connection</h4>
+			<p>The minimum internet connection speed for the server is 1 Mbps
+				for up- and downstream and a very low ping time.
+			</p>
+			<h4>Computer hardware</h4>
+			<p>It is recommended to have at least 1.6 GHz CPU frequency and 1 GB
+				RAM.
+			</p>
+			<h4>Operating system</h4>
+			<p>The Jamulus server can be run on all supported operating systems
+				(Windows, Mac and Linux).
+			</p>
+
+			<!-- Using Windows OS -->
+			<h2>Using Windows OS</h2>
+			<p>After installing Jamulus you find a link to the server in the Windows
+				start menu (or "All apps" under Windows 8). When starting the server it
+				automatically registers at the official central server. Just type in the
+				name, city and country so that other users can easily identify your server.</p>
+			<p>If you want the server to be started automatically on each Windows
+				start, enable the corresponding check box. If you do not want to register
+				your server at the official central server (so that it does not show up in the
+				server list of jamulus.dyndns.org) uncheck the "Register" check box.</p>
+
+			<!-- Using a Linux shell -->
+			<h2>Using a Linux shell</h2>
+			<p>If the server shall be started from within an ssh shell, there is
+				a command line option
+			</p>
+			<p><i>./Jamulus -s -n</i>
+			</p>
+			<p>available which starts the server without a GUI (even though the
+				GUI is not used, QT must still be installed on the server to run the
+				Jamulus server software).
+			</p>
+
+			<!-- NAT -->
+			<h2>Operating a central Jamulus server behind a NAT (network router)</h2>
+			<p><i>Note that the following instruction must not be done if you
+					register your server at the official jamulus central server since in that case
+					the NAT port is opened automatically.</i></p>
+			<p>If a Jamulus <b>central</b> server is operated behind a NAT (network router), a
+				port forwarding to the computer running the Jamulus server software
+				has to be setup in the router. The default port for the current
+				version of the Jamulus software is 22124.
+			</p>
+			<p>You have to open your firewall for the <b>UDP</b> (not TCP) protocol for the port
+				you run Jamulus server with.
+			</p>
+			<p>E.g., for a Linksys router, this setting can be found in the
+				following settings dialog:
+			</p>
+			<p><img src="images/Linksysportforwarding.jpg" name="Linksysportforwarding" alt="Linksys port forwarding" align="bottom" width="400" height="197" border="0" />
+			</p>
+			<p>See also <a href="http://www.portforward.com/">portforward.com</a>.
+			</p>
+			<p>You do not need to open a port range as shown in the example
+				above as long as you want to start only one instance of the Jamulus
+				server on the same machine.
+			</p>
+			<p>When using a different port than the default port of Jamulus server
+				(22124) you have to enter the port number after the server name or
+				ip address separated by a colon in the Jamulus client (e. g.
+				jamulus.dyndns.org<b>:22120</b>).
+			</p>
+
+			<!-- jamulus.dyndns.org configuration -->
+			<h2><span class="red">Outdated:</span> Configuration of the jamulus.dyndns.org official central server</h2>
+			<h4>Starting the server</h4>
+			<p>The official central server at jamulus.dyndns.org is started with the following
+				command line:
+			</p>
+			<pre>chrt 99 ionice -c1 nice -n -20 Jamulus -s -n -g
+	-l /var/log/llconserver1 -e "localhost" -o "jamulus.dyndns.org;Aachen;82" &amp;</pre>
+			<ul>
+				<li>chrt 99: run a new process with
+					the given real-time scheduling properties</li>
+				<li>ionice -c1: sets the io
+					scheduling class to 1 for real time</li>
+				<li>nice -n -20: run with modified
+					scheduling priority -20 (highest priority)</li>
+				<li>-s: Jamulus server mode</li>
+				<li>-n: the server shall be run in deamon mode and no GUI is started</li>
+				<li>-g: send ping messages to the servers in the server list to keep NAT ports open</li>
+				<li>-l /var/log/llconserver1: store
+					the server statistic in the file llconserver1</li>
+				<li>-e: central server address (since this is a central server, set to "localhost")</li>
+				<li>-o: set the name, city and country information</li>
+			</ul>
+			<h4>Html current server status page</h4>
+			<p>With the "-m" and "-a" command line arguments a server statistic information can
+				be generated to be put on a web page. An example php script for using the server
+				status file for displaying the current server status on a html page (assuming
+				the following command line arguments to be used: "-m /var/www/stat1.dat -a jamulus.dyndns.org") is:
+			</p>
+			<pre>&lt;?php
+function loadserverstat ( $statfilename )
+{
+   $datei = fopen ( $statfilename, &quot;r&quot; );
+   while (&nbsp;!feof ( $datei ) )
+   {
+	  $buffer = fgets ( $datei, 4096 );
+	  echo $buffer;
+   }
+   fclose($datei);
+}
+?&gt;
+&lt;?php loadserverstat ( &quot;stat1.dat&quot; );&nbsp;?&gt;</pre>
+
+		</div>
+		<div id="footer">
+			TRADEMARKS: <i>The names of actual companies and products
+				mentioned herein may be the trademarks of their respective owners.</i>
+			<br />LINKS TO THIRD PARTY SITES: <i>This site contains links to other
+				sites. We are not responsible for the content of any linked Web
+				site.</i>
+		</div>
+	</div>
+</body>
+
+</html>
